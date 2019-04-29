@@ -1,6 +1,6 @@
-# Rotary encoder controlled menu on a 128x32 OLED display
+# 3th buttons controlled menu on a 128x32 OLED display
 
-Some code from playing around with getting a menu, or set of menus, to work by using a rotary encoder.
+Some code from playing around with getting a menu, or set of menus, to work by using a three buttons.
 
 The output of this is very specifically for a 128x32 OLED display that uses the SSD1306 chip.
 
