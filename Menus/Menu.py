@@ -1,7 +1,7 @@
 import os
 import threading
 
-from Adafruit import SSD1306
+import Adafruit_SSD1306
 from RPi import GPIO
 from PIL import Image, ImageDraw, ImageFont
 
@@ -11,16 +11,16 @@ class Menu:
     def __init__(self, options=[]):
         self.options = options
         self.highlightOption = None
-        self.rowCount = 3
+        self.rowCount = 6
 
-        self.oled = SSD1306.SSD1306_128_32(rst=None, gpio=GPIO)
+        self.oled = Adafruit_SSD1306.SSD1306_128_64(rst=None, gpio=GPIO)
         self.oled.begin()
         self.oled.clear()
         self.oled.display()
 
         self.image = Image.new('1', (self.oled.width, self.oled.height))
         self.draw = ImageDraw.Draw(self.image)
-        self.font = ImageFont.truetype(os.path.dirname(__file__) + '/pixel_arial_11.ttf', 8)
+        self.font = ImageFont.truetype(os.path.dirname(__file__) + '/POEMonospace.ttf', 10)
 
         self.renderThread = None
 
