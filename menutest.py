@@ -13,7 +13,7 @@ m = Menu([
     "Support the sixth"
 ])
 
-r = Buttons(**{'menu': m, 'btn_left': 17, 'btn_ok': 27, 'btn_right': 22})
+b = Buttons(**{'menu': m, 'btn_left': 17, 'btn_ok': 27, 'btn_right': 22})
 
 if len(sys.argv) > 1:
     if sys.argv[1] == 'clear':
