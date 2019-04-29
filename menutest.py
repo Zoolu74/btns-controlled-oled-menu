@@ -2,7 +2,7 @@ import sys
 from time import sleep
 
 from Menus.Menu import Menu
-from Input.Rotary import Rotary
+from Input.Buttons import Buttons
 
 m = Menu([
     "First line",
@@ -13,7 +13,7 @@ m = Menu([
     "Support the sixth"
 ])
 
-r = Rotary(**{'menu': m, 'clk': 29, 'dt': 31, 'btn': 37})
+r = Buttons(**{'menu': m, 'btn_left': 17, 'btn_ok': 27, 'btn_right': 22})
 
 if len(sys.argv) > 1:
     if sys.argv[1] == 'clear':
